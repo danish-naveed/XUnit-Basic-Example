@@ -12,7 +12,7 @@
                 var firstDelimiter = accountNumber.IndexOf('-');
                 var secondDelimiter = accountNumber.LastIndexOf('-');
 
-                if (firstDelimiter == -1 || secondDelimiter == -1)
+                if (firstDelimiter == -1 || secondDelimiter == firstDelimiter)
                     throw new ArgumentException();
 
                 //var firstPart = accountNumber.Substring(0, firstDelimiter);
