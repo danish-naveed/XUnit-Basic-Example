@@ -2,10 +2,10 @@
 {
     public class AccountNumberValidation
     {
-        private const int startingPartLength = 3;
-        private const int middlePartLength = 10;
-        private const int lastPartLength = 2;
-        private const int invalidDelimeter = -1;
+        private const int StartingPartLength = 3;
+        private const int MiddlePartLength = 10;
+        private const int LastPartLength = 2;
+        private const int InvalidDelimeter = -1;
 
         public bool IsValid(string accountNumber)
         {
@@ -14,7 +14,7 @@
                 var firstDelimiter = accountNumber.IndexOf('-');
                 var secondDelimiter = accountNumber.LastIndexOf('-');
 
-                if (firstDelimiter == invalidDelimeter || secondDelimiter == firstDelimiter)
+                if (firstDelimiter == InvalidDelimeter || secondDelimiter == firstDelimiter)
                     throw new ArgumentException();
 
                 //var firstPart = accountNumber.Substring(0, firstDelimiter);
