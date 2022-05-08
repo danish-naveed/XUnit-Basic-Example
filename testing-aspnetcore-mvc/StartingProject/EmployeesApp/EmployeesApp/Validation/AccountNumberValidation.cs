@@ -20,18 +20,18 @@
                 //var firstPart = accountNumber.Substring(0, firstDelimiter);
                 var firstPart = accountNumber[..firstDelimiter];
 
-                if (firstPart.Length != startingPartLength)
+                if (firstPart.Length != StartingPartLength)
                     return false;
 
-                var tempPart = accountNumber.Remove(0, startingPartLength + 1);
+                var tempPart = accountNumber.Remove(0, StartingPartLength + 1);
                 var middlePart = tempPart.Substring(0, tempPart.IndexOf('-'));
 
-                if (middlePart.Length != middlePartLength)
+                if (middlePart.Length != MiddlePartLength)
                     return false;
 
                 var lastPart = accountNumber.Substring(secondDelimiter + 1);
 
-                if (lastPart.Length != lastPartLength)
+                if (lastPart.Length != LastPartLength)
                     return false;
 
                 return true;
