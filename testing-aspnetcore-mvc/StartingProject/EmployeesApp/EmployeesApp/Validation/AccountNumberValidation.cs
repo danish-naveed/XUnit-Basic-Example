@@ -5,6 +5,8 @@
         private const int startingPartLength = 3;
         private const int middlePartLength = 10;
         private const int lastPartLength = 2;
+        private const int invalidDelimeter = -1;
+
         public bool IsValid(string accountNumber)
         {
             try
@@ -12,7 +14,7 @@
                 var firstDelimiter = accountNumber.IndexOf('-');
                 var secondDelimiter = accountNumber.LastIndexOf('-');
 
-                if (firstDelimiter == -1 || secondDelimiter == firstDelimiter)
+                if (firstDelimiter == invalidDelimeter || secondDelimiter == firstDelimiter)
                     throw new ArgumentException();
 
                 //var firstPart = accountNumber.Substring(0, firstDelimiter);
