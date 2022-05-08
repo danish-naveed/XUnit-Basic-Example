@@ -2,9 +2,9 @@
 {
     public class AccountNumberValidation
     {
-        private const int startingPartLength = 3;
-        private const int middlePartLength = 10;
-        private const int lastPartLength = 2;
+        private const int StartingPartLength = 3;
+        private const int MiddlePartLength = 10;
+        private const int LastPartLength = 2;
         public bool IsValid(string accountNumber)
         {
             try
